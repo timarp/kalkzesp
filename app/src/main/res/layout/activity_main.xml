@@ -7,255 +7,274 @@
     tools:context="pl.ula.liczby_zesp.MainActivity">
 
     <TableLayout
-        android:layout_width="match_parent"
+        android:id="@+id/tableLayout"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:gravity="center">
+        android:layout_marginBottom="24dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
 
         <TableRow
-            android:layout_width="100dp"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_weight="0.1"
             android:gravity="center">
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:text="w  "
+                android:textAlignment="center"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:text="x i  "
+                android:textAlignment="center"
+                android:textSize="24dp" />
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:text="y j "
+                android:textAlignment="center"
+                android:textSize="24dp" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:text="z k"
+                android:textAlignment="center"
+                android:textSize="24dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.1"
+            android:gravity="center">
+
+            <EditText
+                android:id="@+id/w_val"
+                android:layout_width="128dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
+                android:ems="10"
+                android:textStyle="bold" />
+
+
+
 
             <EditText
                 android:id="@+id/i_val"
-                android:layout_width="91dp"
-                android:layout_height="wrap_content"
+                android:layout_width="128dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
                 android:ems="10"
-                android:inputType="numberSigned" />
+                android:inputType="numberSigned"
+                android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/i_txt"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="i" />
+
 
             <EditText
                 android:id="@+id/j_val"
-                android:layout_width="60dp"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
                 android:ems="10"
-                android:inputType="numberSigned" />
+                android:inputType="numberSigned"
+                android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/j_txt"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="j" />
+
 
             <EditText
                 android:id="@+id/k_val"
-                android:layout_width="91dp"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
                 android:ems="10"
-                android:inputType="numberSigned" />
+                android:inputType="numberSigned"
+                android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/k_txt"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="k" />
+
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_weight="0.1"
             android:gravity="center">
+
+            <EditText
+                android:id="@+id/w_val2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
+                android:ems="10"
+                android:inputType="numberSigned" />
 
             <EditText
                 android:id="@+id/i_val2"
-                android:layout_width="91dp"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
                 android:ems="10"
                 android:inputType="numberSigned" />
-
-            <TextView
-                android:id="@+id/i_txt2"
-                android:layout_width="10dp"
-                android:layout_height="wrap_content"
-                android:text="i" />
 
             <EditText
                 android:id="@+id/j_val2"
-                android:layout_width="60dp"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
                 android:ems="10"
                 android:inputType="numberSigned" />
-
-            <TextView
-                android:id="@+id/j_txt2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="j" />
 
             <EditText
                 android:id="@+id/k_val2"
-                android:layout_width="91dp"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
                 android:ems="10"
                 android:inputType="numberSigned" />
 
-            <TextView
-                android:id="@+id/k_txt2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="k" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="center">
-
-            <EditText
-                android:id="@+id/i_val3"
-                android:layout_width="91dp"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:enabled="false"
-                android:inputType="numberSigned" />
-
-            <TextView
-                android:id="@+id/i_txt3"
-                android:layout_width="88dp"
-                android:layout_height="wrap_content"
-                android:text="i" />
-
-            <EditText
-                android:id="@+id/j_val3"
-                android:layout_width="60dp"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:enabled="false"
-                android:inputType="numberSigned" />
-
-            <TextView
-                android:id="@+id/j_txt3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="j" />
-
-            <EditText
-                android:id="@+id/k_val3"
-                android:layout_width="91dp"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:enabled="false"
-                android:inputType="numberSigned" />
-
-            <TextView
-                android:id="@+id/k_txt3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="k" />
-        </TableRow>
-
-
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_weight="0.1"
             android:gravity="center">
 
             <Button
-                android:onClick="onClick"
                 android:id="@+id/b1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
+                android:onClick="onClick"
                 android:text="1" />
 
             <Button
-                android:onClick="onClick"
                 android:id="@+id/b2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="2"
-                />
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
+                android:onClick="onClick"
+                android:text="2" />
 
             <Button
-                android:onClick="onClick"
                 android:id="@+id/b3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
+                android:onClick="onClick"
                 android:text="3" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_weight="0.1"
             android:gravity="center">
 
             <Button
-                android:onClick="onClick"
                 android:id="@+id/b4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
+                android:onClick="onClick"
                 android:text="4" />
 
             <Button
-                android:onClick="onClick"
                 android:id="@+id/b5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
+                android:onClick="onClick"
                 android:text="5" />
 
             <Button
-                android:onClick="onClick"
                 android:id="@+id/b6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
+                android:onClick="onClick"
                 android:text="6" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_weight="0.1"
             android:gravity="center">
 
             <Button
-                android:onClick="onClick"
                 android:id="@+id/b7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
+                android:onClick="onClick"
                 android:text="7" />
 
             <Button
-                android:onClick="onClick"
                 android:id="@+id/b8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
+                android:onClick="onClick"
                 android:text="8" />
 
             <Button
-                android:onClick="onClick"
                 android:id="@+id/b9"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
+                android:onClick="onClick"
                 android:text="9" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_weight="0.1"
             android:gravity="center">
 
             <Button
-                android:onClick="onClick"
                 android:id="@+id/bMINUS"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
+                android:onClick="onClick"
                 android:text="-" />
 
             <Button
-                android:onClick="onClick"
                 android:id="@+id/b0"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
+                android:onClick="onClick"
                 android:text="0" />
 
             <Button
                 android:id="@+id/bKROPKA"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
                 android:onClick="onClick"
                 android:text="." />
 
@@ -265,27 +284,31 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_weight="0.1"
             android:gravity="center">
 
             <Button
-                android:onClick="onClick"
                 android:id="@+id/bPLUSd"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
+                android:onClick="onClick"
                 android:text="Dodaj" />
 
             <Button
-                android:onClick="onClick"
                 android:id="@+id/bMINUSd"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
+                android:onClick="onClick"
                 android:text="Odejmij" />
 
             <Button
-                android:onClick="onClick"
                 android:id="@+id/bMULTIPLYd"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
+                android:onClick="onClick"
                 android:text="Pomnóż" />
 
         </TableRow>
@@ -293,30 +316,42 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_weight="0.1"
             android:gravity="center">
 
             <Button
                 android:id="@+id/bACd"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
                 android:onClick="onClick"
                 android:text="AC" />
 
             <Button
                 android:id="@+id/bCd"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
                 android:onClick="onClick"
                 android:text="C" />
 
             <Button
                 android:id="@+id/bBACKd"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
                 android:onClick="onClick"
                 android:text="Usuń" />
 
         </TableRow>
 
     </TableLayout>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
 </android.support.constraint.ConstraintLayout>

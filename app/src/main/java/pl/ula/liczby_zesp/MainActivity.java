@@ -5,6 +5,7 @@ import android.support.v4.content.SharedPreferencesCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -22,6 +23,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main);
 
         //this.getCurrentFocus()
@@ -31,14 +33,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         editCtl.put("i1", (EditText)findViewById(R.id.i_val));
         editCtl.put("j1", (EditText)findViewById(R.id.j_val));
         editCtl.put("k1", (EditText)findViewById(R.id.k_val));
+        editCtl.put("w1", (EditText)findViewById(R.id.w_val));
 
         editCtl.put("i2", (EditText)findViewById(R.id.i_val2));
         editCtl.put("j2", (EditText)findViewById(R.id.j_val2));
         editCtl.put("k2", (EditText)findViewById(R.id.k_val2));
+        editCtl.put("w2", (EditText)findViewById(R.id.w_val2));
 
-        editCtl.put("i3", (EditText)findViewById(R.id.i_val3));
-        editCtl.put("j3", (EditText)findViewById(R.id.j_val3));
-        editCtl.put("k3", (EditText)findViewById(R.id.k_val3));
+//        editCtl.put("i3", (EditText)findViewById(R.id.i_val3));
+//        editCtl.put("j3", (EditText)findViewById(R.id.j_val3));
+//        editCtl.put("k3", (EditText)findViewById(R.id.k_val3));
 
         for(final Map.Entry<String, EditText> entry: editCtl.entrySet())
         {
@@ -55,6 +59,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 }
             });
+
 
         }
 
@@ -154,7 +159,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     public void operation(String typeop)
     {
-        double i1, i2, i3, j1, j2, j3, k1, k2, k3;
+        double i1, i2, i3, j1, j2, j3, k1, k2, k3, w1, w2;
 
         try
         {
@@ -169,48 +174,62 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             i1 = Double.parseDouble(editCtl.get("i1").getText().toString());
             i2 = Double.parseDouble(editCtl.get("i2").getText().toString());
-            i3 = Double.parseDouble(editCtl.get("i3").getText().toString());
+           // i3 = Double.parseDouble(editCtl.get("i3").getText().toString());
 
             j1 = Double.parseDouble(editCtl.get("j1").getText().toString());
             j2 = Double.parseDouble(editCtl.get("j2").getText().toString());
-            j3 = Double.parseDouble(editCtl.get("j3").getText().toString());
+          //  j3 = Double.parseDouble(editCtl.get("j3").getText().toString());
 
             k1 = Double.parseDouble(editCtl.get("k1").getText().toString());
             k2 = Double.parseDouble(editCtl.get("k2").getText().toString());
-            k3 = Double.parseDouble(editCtl.get("k3").getText().toString());
+          //  k3 = Double.parseDouble(editCtl.get("k3").getText().toString());
+
+            w1 = Double.parseDouble(editCtl.get("w1").getText().toString());
+            w2 = Double.parseDouble(editCtl.get("w1").getText().toString());
 
 
             switch(typeop)
             {
                 case "+":
-                    i3 = i1 + i2;
-                    j3 = j1 + j2;
-                    k3 = k1 + k2;
+                    i1 = i1 + i2;
+                    j1 = j1 + j2;
+                    k1 = k1 + k2;
+                    w1 = w1 + w2;
                     break;
 
                 case "-":
-                    i3 = i1 - i2;
-                    j3 = j1 - j2;
-                    k3 = k1 - k2;
+                    i1 = i1 - i2;
+                    j1 = j1 - j2;
+                    k1 = k1 - k2;
+                    w1 = w1 - w2;
                     break;
 
                 case "*":
-                    i3 = i1 * i2;
-                    j3 = j1 * j2;
-                    k3 = k1 * k2;
+                    i1 = i1 * i2;
+                    j1 = j1 * j2;
+                    k1 = k1 * k2;
+                    w1 = w1 * w2;
                     break;
 
                   default:
 
-                    i3 = 0;
-                    j3 = 0;
-                    k3 = 0;
+                    i1 = 0;
+                    j1 = 0;
+                    k1 = 0;
+                    w1 = 0;
 
             }
 
-            editCtl.get("k3").setText(String.valueOf(k3));
-            editCtl.get("j3").setText(String.valueOf(j3));
-            editCtl.get("i3").setText(String.valueOf(i3));
+            editCtl.get("k1").setText(String.valueOf(k1));
+            editCtl.get("j1").setText(String.valueOf(j1));
+            editCtl.get("i1").setText(String.valueOf(i1));
+            editCtl.get("w1").setText(String.valueOf(w1));
+
+
+            editCtl.get("k2").setText("0");
+            editCtl.get("j2").setText("0");
+            editCtl.get("i2").setText("0");
+            editCtl.get("w2").setText("0");
         }
         catch(Exception e)
         {
