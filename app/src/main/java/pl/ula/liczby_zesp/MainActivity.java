@@ -7,12 +7,15 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewAnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+import android.animation.Animator;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Random;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -81,6 +84,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         if(idEdit==0)
             return;
+
+        View myView = view;
+        int cx = myView.getWidth() / 2;
+        int cy = myView.getHeight() / 2;
+        float finalRadius = (float) Math.hypot(cx, cy);
+        Animator anim = ViewAnimationUtils.createCircularReveal(myView, cx, cy, 0, finalRadius);
+        anim.start();
+
 
         Button b = (Button)view;
         String val = b.getText().toString();
@@ -185,7 +196,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
           //  k3 = Double.parseDouble(editCtl.get("k3").getText().toString());
 
             w1 = Double.parseDouble(editCtl.get("w1").getText().toString());
-            w2 = Double.parseDouble(editCtl.get("w1").getText().toString());
+            w2 = Double.parseDouble(editCtl.get("w2").getText().toString());
 
 
             switch(typeop)
@@ -225,11 +236,29 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             editCtl.get("i1").setText(String.valueOf(i1));
             editCtl.get("w1").setText(String.valueOf(w1));
 
+            View myView =  editCtl.get("k1");
+            int cx = myView.getWidth() / 2;
+            int cy = myView.getHeight() / 2;
+            float finalRadius = (float) Math.hypot(cx, cy);
+            ViewAnimationUtils.createCircularReveal( editCtl.get("k1"), cx, cy, 0, finalRadius).start();
+            ViewAnimationUtils.createCircularReveal( editCtl.get("j1"), cx, cy, 0, finalRadius).start();
+            ViewAnimationUtils.createCircularReveal( editCtl.get("i1"), cx, cy, 0, finalRadius).start();
+            ViewAnimationUtils.createCircularReveal( editCtl.get("w1"), cx, cy, 0, finalRadius).start();
+
 
             editCtl.get("k2").setText("0");
             editCtl.get("j2").setText("0");
             editCtl.get("i2").setText("0");
             editCtl.get("w2").setText("0");
+
+
+            ViewAnimationUtils.createCircularReveal( editCtl.get("k2"), cx, cy, 0, finalRadius).setDuration(1000).start();
+            ViewAnimationUtils.createCircularReveal( editCtl.get("j2"), cx, cy, 0, finalRadius).setDuration(1000).start();
+            ViewAnimationUtils.createCircularReveal( editCtl.get("i2"), cx, cy, 0, finalRadius).setDuration(1000).start();
+            ViewAnimationUtils.createCircularReveal( editCtl.get("w2"), cx, cy, 0, finalRadius).setDuration(1000).start();
+
+
+
         }
         catch(Exception e)
         {
